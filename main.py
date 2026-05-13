@@ -16,6 +16,8 @@ import sys
 import time
 from typing import List, Optional
 
+from dotenv import load_dotenv
+
 from alerts.alert_manager import AlertManager
 from alerts.console_dashboard import ConsoleDashboard
 from config import SystemConfig, load_config
@@ -118,6 +120,8 @@ async def main() -> None:
     with proper error handling and graceful shutdown support.
     """
     global _shutdown_requested
+
+    load_dotenv()
 
     args = parse_arguments()
     setup_logging(args.log_level)
