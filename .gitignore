@@ -18,3 +18,6 @@ build/
 *.swp
 *.swo
 .agents/
+docker-compose.override.yml
+*.env.*
+!.env.example
